@@ -10,29 +10,11 @@
 //
 // export default multiply;
 
-
-
 // const root = 'https://jsonplaceholder.typicode.com/posts?userId=1';
 //
 // fetch(root, {method: "GET"})
 //   .then(response => response.json())
 //   .then(json => console.log(json));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Closures
 // let product = x => y => x*y ;
@@ -41,8 +23,6 @@
 // console.log(a);
 //
 // console.log( a(20) );
-
-
 
 // let contains = (word, letter) => {
 //   let word_arr = word.split("");
@@ -62,17 +42,12 @@
 //
 // contains('Loremipsumdolor', 'z');
 
-
-
-
 // let chars = 'Loremipsumdolor lakmsdpasmd pasomda sitametconsectetura  dipisicingelitseddoeiusmodtemp orincididuntutlaboreetdolore';
 //
 // let chars_array = chars.split("");
 // let chars_set = new Set( chars_array );
 //
 // console.log( chars_set );
-
-
 
 // class Animal {
 //   constructor(name, height){
@@ -101,18 +76,11 @@
 // son.hello();
 //
 
-
-
-
-
-
 // import { multiply,add } from './math';
 //
 // console.log( multiply(2,5) );
 // console.log( add(10,46) );
 //
-
-
 
 // let values = [10, 30, 60, 90];
 //
@@ -120,15 +88,10 @@
 //
 // console.log(double);
 
-
-
-
-
 // Template Literals, or String Literals
 // // let a = 'Hyderabad';
 // // let b = `Tomorrow I am leaving from ${a}`;
 // // console.log(b);
-
 
 // let limit = 100;
 // let limit = 600;

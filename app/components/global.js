@@ -1,35 +1,26 @@
-import React, { Component } from 'react';
-import { FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
-import Gallery from './gallery';
+import React, { Component } from "react";
+import { FormGroup, FormControl, InputGroup, Glyphicon } from "react-bootstrap";
+import Gallery from "./gallery";
 
-
-class Global extends Component{
-  constructor(props){
+class Global extends Component {
+  constructor(props) {
     super(props);
     this.state = {
-        query: '',
-        items: []
-    }
+      query: "",
+      items: []
+    };
   }
 
-
-
-
   search() {
-    const BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q=';
-    fetch(`${BASE_URL}${this.state.query}`,{ method: 'GET'})
+    const BASE_URL = "https://www.googleapis.com/books/v1/volumes?q=";
+    fetch(`${BASE_URL}${this.state.query}`, { method: "GET" })
       .then(response => response.json())
       .then(json => {
-        let {items} = json;
-        this.setState({items: items})
+        let { items } = json;
+        this.setState({ items: items });
         console.log(items);
       });
   }
-
-
-
-
-
 
   render() {
     return (
@@ -40,24 +31,22 @@ class Global extends Component{
             <FormControl
               type="text"
               placeholder="Search the book here"
-              onChange={event => this.setState({query: event.target.value})}
+              onChange={event => this.setState({ query: event.target.value })}
               onKeyPress={event => {
-                if(event.key === 'Enter'){
+                if (event.key === "Enter") {
                   this.search();
                 }
               }}
             />
             <InputGroup.Addon onClick={() => this.search()}>
-              <Glyphicon glyph="search"></Glyphicon>
+              <Glyphicon glyph="search" />
             </InputGroup.Addon>
           </InputGroup>
         </FormGroup>
-        <Gallery items={this.state.items}/>
+        <Gallery items={this.state.items} />
       </div>
-    )
+    );
   }
-
 }
-
 
 export default Global;

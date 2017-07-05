@@ -1,18 +1,18 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: ['./app/index.js'],
+  entry: ["./app/index.js"],
 
   output: {
-    path: path.resolve(__dirname,'./build'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "./build"),
+    filename: "bundle.js"
   },
 
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: 'babel-loader',
+        use: "babel-loader",
         exclude: /node_modules/
       }
     ]
@@ -20,7 +20,7 @@ module.exports = {
 
   devServer: {
     port: 3000,
-    contentBase: './build',
+    contentBase: "./build",
     inline: true
   }
-}
+};
